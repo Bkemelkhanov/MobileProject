@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">AshykOrin</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_reservations">Reservations</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_almaty">Almaty</string>
+
+    <string name="notifications_sign_in_ashyk_orin">Sign in with AshykOrin</string>
+    <string name="notifications_sign_in_google">Sign in with Google</string>
+    <string name="notifications_sign_in_facebook">Sign in with Facebook</string>
+    <string name="notifications_or">Or</string>
+    <string name="notifications_create_account">Create an account</string>
+    <string name="notification_terms_privacy">By selecting “Create an account”, you agree to the terms and conditions of the AshykOrin Terms of Use and Privacy Policy.</string>
+    <string name="notifications_nothing_to_see">Nothing to see here, you\'re all caught up</string>
+
+    <string name="create_account_first_name">First Name</string>
+    <string name="create_account_second_name">Second Name</string>
+    <string name="create_account_email">Email Address</string>
+    <string name="create_account_password">Password</string>
+
+    <string name="home_restaurant_reviews">%1$s (%2$s)</string>
+    <string name="home_browse_by_cuisine">Browse by cuisine</string>
+
+    <string name="action_continue">Continue</string>
+    <string name="action_done">Done</string>
+    <string name="action_clear_all">Clear All</string>
+
+    <string name="home_see_all_delivery_options">See all delivery options</string>
+
+    <string name="future_times_title">Future Times</string>
+
+    <string name="search_all_restaurants">All restaurants</string>
+    <string name="search_default_table">Table for 2, now</string>
+
+    <string name="reservations_upcoming">Upcoming (%1$d)</string>
+
+    <string name="type_central_asian">Central Asian</string>
+    <string name="type_coffee_and_breakfast">Coffee and breakfast</string>
+    <string name="type_pizza">Pizza</string>
+    <string name="type_burger">Burger</string>
+
+    <string name="restaurant_details_reserve">Reserve</string>
+    <string name="restaurant_details_menu">Menu</string>
+    <string name="restaurant_details_reviews">Reviews</string>
+
+    <string name="account_your_stats">Your stats</string>
+    <string name="account_reservations">Reservations</string>
+    <string name="account_reviews">Reviews</string>
+    <string name="account_photos">Photos</string>
+
+    <string name="restaurant_reserve_call_for_takeout">Call for takeout</string>
+    <string name="restaurant_reserve_find_future_times">Find future times</string>
+    <string name="restaurant_reserve_personalize_your_experience">Personalize your experience</string>
+    <string name="restaurant_reserve_build_taste_profile">Help us build your taste profile. Would you try %1$s?</string>
+    <string name="restaurant_reserve_table_info">Table for %1$d Today at 19:00</string>
+
+    <string name="make_reservation_what_occasion">What\'s the occasion?</string>
+    <string name="make_reservation_special_request">Special request (optional)</string>
+    <string name="make_reservation_requests_accommodation">Not all requests can be accommodated</string>
+    <string name="make_reservation_allow_text_updates">Allow text updates?</string>
+    <string name="make_reservation_text_updates_description">Get reminders and waitlist status updates. You can opt out at any time by changing your settings.</string>
+    <string name="make_reservation_error_phone_number">Please enter a valid phone number</string>
+    <string name="make_reservation_table_for_people">Table for %1$d people</string>
+
+    <string name="reviews_was_review_useful">Was this review useful to you?</string>
+    <string name="reviews_city">(%1$s)</string>
+
+    <string name="title_yes">Yes</string>
+    <string name="title_no">No</string>
+    <string name="title_phone">Phone</string>
+    <string name="title_price">Price</string>
+    <string name="title_cuisine">Cuisine</string>
+    <string name="title_hours">Hours</string>
+    <string name="title_payment_options">Payment options</string>
+    <string name="title_parking">Parking</string>
+    <string name="title_description">Description</string>
+    <string name="title_learn_more">Learn more</string>
+    <string name="title_reserve">Reserve</string>
+    <string name="title_success">Success</string>
+    <string name="title_sign_up">Sign Up</string>
+    <string name="title_sign_out">Sign out</string>
+    <string name="title_about">About the Restaurant</string>
+
+    <string name="error_generic_error">Произошла ошибка</string>
+
+    <plurals name="people">
+        <item quantity="one">%1$d person</item>
+        <item quantity="many">%1$d people</item>
+        <item quantity="other">%1$d people</item>
+        <item quantity="two">%1$d people</item>
+        <item quantity="few">%1$d people</item>
+    </plurals>
+
+    <plurals name="reviews">
+        <item quantity="zero">%1$d reviews</item>
+        <item quantity="one">%1$d review</item>
+        <item quantity="many">%1$d reviews</item>
+        <item quantity="other">%1$d reviews</item>
+        <item quantity="two">%1$d reviews</item>
+        <item quantity="few">%1$d reviews</item>
+    </plurals>
+</resources>
