@@ -1,7 +1,8 @@
-package com.example.projectmobilerestaurant
+package com.example.projectmobilerestaurant.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.projectmobilerestaurant.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

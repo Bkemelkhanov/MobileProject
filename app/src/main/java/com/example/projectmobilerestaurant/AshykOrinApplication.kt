@@ -1,4 +1,5 @@
 package com.example.projectmobilerestaurant
 
-class CreateAccountActivity {
+
+class AshykOrinApplication {
 }
