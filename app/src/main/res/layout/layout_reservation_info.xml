@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:textColor="@color/ashykOrinBlack"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineTwentyFive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="TextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textDayNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/ashykOrinBlack"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textMonth"
+            app:layout_constraintStart_toStartOf="@+id/textMonth"
+            app:layout_constraintTop_toBottomOf="@+id/textMonth"
+            tools:text="16" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textDay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/ashykOrinBlack"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="@+id/textMonth"
+            app:layout_constraintStart_toStartOf="@+id/textDayNumber"
+            app:layout_constraintTop_toBottomOf="@+id/textDayNumber"
+            tools:text="TextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/ashykOrinBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineTwentyFive"
+            app:layout_constraintTop_toTopOf="@+id/textMonth"
+            tools:text="TextView" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTwentyFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imagePerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/textName"
+            app:layout_constraintTop_toBottomOf="@+id/textName"
+            app:srcCompat="@drawable/ic_person" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/imagePerson"
+            app:layout_constraintTop_toBottomOf="@+id/imagePerson"
+            app:srcCompat="@drawable/ic_time" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imagePoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageTime"
+            app:layout_constraintTop_toBottomOf="@+id/imageTime"
+            app:srcCompat="@drawable/ic_dollar_currency" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/ashykOrinBlack"
+            app:layout_constraintEnd_toEndOf="@+id/textName"
+            app:layout_constraintStart_toEndOf="@+id/imagePerson"
+            app:layout_constraintTop_toTopOf="@+id/imagePerson"
+            tools:text="TextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ashykOrinBlack"
+            app:layout_constraintEnd_toEndOf="@+id/textTable"
+            app:layout_constraintStart_toStartOf="@+id/textTable"
+            app:layout_constraintTop_toTopOf="@+id/imageTime"
+            tools:text="TextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textPoints"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="100 pts"
+            android:textColor="@color/ashykOrinBlack"
+            app:layout_constraintEnd_toEndOf="@+id/textTime"
+            app:layout_constraintStart_toStartOf="@+id/textTime"
+            app:layout_constraintTop_toTopOf="@+id/imagePoints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

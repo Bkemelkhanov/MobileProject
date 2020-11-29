@@ -5,5 +5,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textFullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textColor="@color/ashykOrinBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bekarys Kemelkhanov" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textStats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/account_your_stats"
+        android:textColor="@color/ashykOrinBlack"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textFullName"
+        app:layout_constraintStart_toStartOf="@+id/textFullName"
+        app:layout_constraintTop_toBottomOf="@+id/textFullName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textReservations"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textColor="@color/ashykOrinBlack"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textReviews"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textStats"
+        app:layout_constraintTop_toBottomOf="@+id/textStats"
+        tools:text="0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textReviews"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/ashykOrinBlack"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textPhotos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textReservations"
+        app:layout_constraintTop_toTopOf="@+id/textReservations"
+        tools:text="0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPhotos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/ashykOrinBlack"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textStats"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textReviews"
+        app:layout_constraintTop_toTopOf="@+id/textReviews"
+        tools:text="0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textReservationsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/account_reservations"
+        android:textColor="@color/ashykOrinBlack"
+        app:layout_constraintEnd_toEndOf="@+id/textReservations"
+        app:layout_constraintStart_toStartOf="@+id/textReservations"
+        app:layout_constraintTop_toBottomOf="@+id/textReservations" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textReviewsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/account_reviews"
+        android:textColor="@color/ashykOrinBlack"
+        app:layout_constraintEnd_toEndOf="@+id/textReviews"
+        app:layout_constraintStart_toStartOf="@+id/textReviews"
+        app:layout_constraintTop_toTopOf="@+id/textReservationsLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPhotosLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/account_photos"
+        android:textColor="@color/ashykOrinBlack"
+        app:layout_constraintEnd_toEndOf="@+id/textPhotos"
+        app:layout_constraintStart_toStartOf="@+id/textPhotos"
+        app:layout_constraintTop_toTopOf="@+id/textReviewsLabel" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSignOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/ashykOrinWhite"
+        android:text="@string/title_sign_out"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

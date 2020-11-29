@@ -1,6 +1,593 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.projectmobilerestaurant.ui.details.reserve.ReserveFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardTableInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardBackgroundColor="@color/ashykOrinWhite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageCalendar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_reservation"
+                                app:tint="@color/ashykOrinBlack" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textTableInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="18sp"
+                                app:layout_constraintStart_toEndOf="@id/imageCalendar"
+                                app:layout_constraintTop_toTopOf="@id/imageCalendar"
+                                tools:text="Table for 3 Tonight at 19:00" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintBottom_toBottomOf="@id/textTableInfo"
+                                app:layout_constraintStart_toEndOf="@id/textTableInfo"
+                                app:layout_constraintTop_toTopOf="@id/textTableInfo"
+                                app:srcCompat="@drawable/ic_filled_arrow_down" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/ashykOrinVeryLightGray"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/imageCalendar" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerTableTime"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="@+id/cardTableInfo"
+                        app:layout_constraintStart_toStartOf="@+id/cardTableInfo"
+                        app:layout_constraintTop_toBottomOf="@id/cardTableInfo" />
+
+                    <View
+                        android:id="@+id/viewBelowRecycler"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/ashykOrinVeryLightGray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/recyclerTableTime" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/callForTakeout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/recyclerTableTime"
+                        app:layout_constraintTop_toBottomOf="@+id/viewBelowRecycler">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imagePhone"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textCallForTakeout"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/ic_phone"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textCallForTakeout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="@string/restaurant_reserve_call_for_takeout"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/imagePhone"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:textAllCaps="true" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardFindFutureTimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/callForTakeout"
+                        app:layout_constraintTop_toBottomOf="@+id/callForTakeout">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageFindFutureTimes"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textFindFutureTimes"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/ic_reservation"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textFindFutureTimes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="@string/restaurant_reserve_find_future_times"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/imageFindFutureTimes"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:textAllCaps="true" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:id="@+id/viewBelowFindFutureTimes"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/ashykOrinWhisper"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cardFindFutureTimes" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPersonalizeExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/ashykOrinWhite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewBelowFindFutureTimes">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/appCompatTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/restaurant_reserve_personalize_your_experience"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imagePersonalizeExperience"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textHelpPersonalize"
+                                app:layout_constraintStart_toStartOf="@+id/appCompatTextView"
+                                app:layout_constraintTop_toTopOf="@+id/textHelpPersonalize"
+                                app:srcCompat="@drawable/ic_medal" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textHelpPersonalize"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/imagePersonalizeExperience"
+                                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
+                                tools:text="Help us build your taste profile. Would you try Vista Restaurant - The Ritz-Carlton Almaty?" />
+
+                            <View
+                                android:id="@+id/viewBelowHelpPersonalize"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/ashykOrinVeryLightGray"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/textHelpPersonalize" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/buttonYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@color/ashykOrinWhite"
+                                android:drawableStart="@drawable/ic_thumb_up"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="@string/title_yes"
+                                android:textColor="@color/colorPrimary"
+                                app:drawableTint="@color/colorPrimary"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/appCompatTextView"
+                                app:layout_constraintTop_toBottomOf="@id/viewBelowHelpPersonalize" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/buttonNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:background="@color/ashykOrinWhite"
+                                android:drawableStart="@drawable/ic_thumb_down"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="@string/title_no"
+                                android:textColor="@color/colorPrimary"
+                                app:drawableTint="@color/colorPrimary"
+                                app:layout_constraintBottom_toBottomOf="@+id/buttonYes"
+                                app:layout_constraintStart_toEndOf="@+id/buttonYes"
+                                app:layout_constraintTop_toTopOf="@+id/buttonYes" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:id="@+id/viewBelowPersonalize"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/ashykOrinWhisper"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cardPersonalizeExperience" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewBelowPersonalize">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textAboutLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/title_about"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="20sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageGoogleMap"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/textAboutLabel" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imagePhoneAbout"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textPhoneLabel"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/imageGoogleMap"
+                                app:srcCompat="@drawable/ic_phone"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textPhoneLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/title_phone"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imagePhoneAbout"
+                                app:layout_constraintTop_toBottomOf="@id/imageGoogleMap" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textPhone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textPhoneLabel"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textPhoneLabel"
+                                app:layout_constraintTop_toTopOf="@+id/textPhoneLabel"
+                                tools:text="(212) 498-9696" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imagePriceAbout"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textPriceLabel"
+                                app:layout_constraintStart_toStartOf="@+id/imagePhoneAbout"
+                                app:layout_constraintTop_toTopOf="@+id/textPriceLabel"
+                                app:srcCompat="@drawable/ic_dollar_currency"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textPriceLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/title_price"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@+id/textPhoneLabel"
+                                app:layout_constraintTop_toBottomOf="@+id/textPhoneLabel" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textPrice"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textPriceLabel"
+                                app:layout_constraintEnd_toEndOf="@+id/textPhone"
+                                app:layout_constraintStart_toEndOf="@+id/textPriceLabel"
+                                app:layout_constraintTop_toTopOf="@+id/textPriceLabel"
+                                tools:text="30 and under" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageCuisine"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textCuisineLabel"
+                                app:layout_constraintStart_toStartOf="@+id/imagePriceAbout"
+                                app:layout_constraintTop_toTopOf="@+id/textCuisineLabel"
+                                app:srcCompat="@drawable/ic_restaurant"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textCuisineLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/title_cuisine"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@+id/textPriceLabel"
+                                app:layout_constraintTop_toBottomOf="@+id/textPriceLabel" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textCuisine"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textCuisineLabel"
+                                app:layout_constraintEnd_toEndOf="@+id/textPrice"
+                                app:layout_constraintStart_toEndOf="@+id/textCuisineLabel"
+                                app:layout_constraintTop_toTopOf="@+id/textCuisineLabel"
+                                tools:text="Italian" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageHours"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textHoursLabel"
+                                app:layout_constraintStart_toStartOf="@+id/imageCuisine"
+                                app:layout_constraintTop_toTopOf="@+id/textHoursLabel"
+                                app:srcCompat="@drawable/ic_hours"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textHoursLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/title_hours"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@+id/textCuisineLabel"
+                                app:layout_constraintTop_toBottomOf="@+id/textCuisineLabel" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textHours"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintEnd_toEndOf="@+id/textCuisine"
+                                app:layout_constraintStart_toStartOf="@+id/textHoursLabel"
+                                app:layout_constraintTop_toBottomOf="@+id/textHoursLabel"
+                                tools:text="Monday to friday" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imagePaymentOptions"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textPaymentOptionsLabel"
+                                app:layout_constraintStart_toStartOf="@+id/imageHours"
+                                app:layout_constraintTop_toTopOf="@+id/textPaymentOptionsLabel"
+                                app:srcCompat="@drawable/ic_payment_options"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textPaymentOptionsLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/title_payment_options"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@+id/textHours"
+                                app:layout_constraintTop_toBottomOf="@+id/textHours" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textPaymentOptions"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintEnd_toEndOf="@+id/textHours"
+                                app:layout_constraintStart_toStartOf="@+id/textPaymentOptionsLabel"
+                                app:layout_constraintTop_toBottomOf="@+id/textPaymentOptionsLabel"
+                                tools:text="Visa, MasterCard" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageParking"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textParkingLabel"
+                                app:layout_constraintStart_toStartOf="@+id/imagePaymentOptions"
+                                app:layout_constraintTop_toTopOf="@+id/textParkingLabel"
+                                app:srcCompat="@drawable/ic_parking"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textParkingLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/title_parking"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@+id/textPaymentOptions"
+                                app:layout_constraintTop_toBottomOf="@+id/textPaymentOptions" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textParking"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintEnd_toEndOf="@+id/textHours"
+                                app:layout_constraintStart_toStartOf="@+id/textParkingLabel"
+                                app:layout_constraintTop_toBottomOf="@+id/textParkingLabel"
+                                tools:text="Street parking" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageDescription"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginBottom="2dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/textDescriptionLabel"
+                                app:layout_constraintStart_toStartOf="@+id/imageParking"
+                                app:layout_constraintTop_toTopOf="@+id/textDescriptionLabel"
+                                app:srcCompat="@drawable/ic_description"
+                                app:tint="@color/colorPrimary" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textDescriptionLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/title_description"
+                                android:textColor="@color/ashykOrinBlack"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="@+id/textParking"
+                                app:layout_constraintTop_toBottomOf="@+id/textParking" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textDescription"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintEnd_toEndOf="@+id/textHours"
+                                app:layout_constraintStart_toStartOf="@+id/textDescriptionLabel"
+                                app:layout_constraintTop_toBottomOf="@+id/textDescriptionLabel"
+                                tools:text="Street parking" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

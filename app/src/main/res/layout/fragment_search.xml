@@ -1,6 +1,124 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.projectmobilerestaurant.ui.search.SearchFragment">
+
+    <View
+        android:id="@+id/viewToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textSearchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/title_search"
+        android:textColor="@color/ashykOrinWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewToolbar"
+        app:layout_constraintStart_toStartOf="@+id/viewToolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textClearAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/action_clear_all"
+        android:textColor="@color/ashykOrinWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/viewToolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonChooseRestaurant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonChooseRestaurant"
+        app:srcCompat="@drawable/ic_restaurant"
+        app:tint="@color/colorPrimary" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonChooseRestaurant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_search_button"
+        android:stateListAnimator="@null"
+        android:text="@string/search_all_restaurants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView3"
+        app:layout_constraintTop_toBottomOf="@+id/viewToolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonChooseCity"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView3"
+        app:layout_constraintTop_toTopOf="@+id/buttonChooseCity"
+        app:srcCompat="@drawable/ic_pin_drop"
+        app:tint="@color/colorPrimary" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonChooseCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_search_button"
+        android:stateListAnimator="@null"
+        android:text="@string/title_almaty"
+        app:layout_constraintEnd_toEndOf="@+id/buttonChooseRestaurant"
+        app:layout_constraintStart_toStartOf="@+id/buttonChooseRestaurant"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChooseRestaurant" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonChooseTable"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView4"
+        app:layout_constraintTop_toTopOf="@+id/buttonChooseTable"
+        app:srcCompat="@drawable/ic_reservation"
+        app:tint="@color/colorPrimary" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonChooseTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_search_button"
+        android:stateListAnimator="@null"
+        android:text="@string/search_default_table"
+        app:layout_constraintEnd_toEndOf="@+id/buttonChooseCity"
+        app:layout_constraintStart_toStartOf="@+id/buttonChooseCity"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChooseCity" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/title_search"
+        android:textAllCaps="false"
+        android:textColor="@color/ashykOrinWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonChooseTable"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView5"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChooseTable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

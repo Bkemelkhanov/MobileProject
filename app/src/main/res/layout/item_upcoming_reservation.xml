@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imagePlace"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textName"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/ashykOrinBlack"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineSeventyFive"
+        app:layout_constraintStart_toEndOf="@+id/imagePlace"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TextView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imagePerson"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textName"
+        app:layout_constraintTop_toTopOf="@+id/textTable"
+        app:srcCompat="@drawable/ic_person"
+        app:tint="@color/ashykOrinDimGray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textName"
+        app:layout_constraintStart_toEndOf="@+id/imagePerson"
+        app:layout_constraintTop_toBottomOf="@+id/textName"
+        tools:text="TextView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageDate"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="@+id/imagePerson"
+        app:layout_constraintTop_toTopOf="@+id/textDate"
+        app:srcCompat="@drawable/ic_event_note"
+        app:tint="@color/ashykOrinDimGray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textTable"
+        app:layout_constraintStart_toStartOf="@+id/textTable"
+        app:layout_constraintTop_toBottomOf="@+id/textTable"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Text view" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView8"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textDate"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textName"
+        app:layout_constraintVertical_bias="0.285"
+        app:srcCompat="@drawable/ic_monetization_on"
+        app:tint="@color/ashykOrinKournikova" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="+100PTS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineSeventyFive"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineSeventyFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
